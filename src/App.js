@@ -14,11 +14,6 @@ function App() {
   const [cart, setCart] = useState({});
   const [total, setTotal] = useState(0);
   /* add your cart state code here */
-
-  function handleClick() {
-    console.log(cart)
-    console.log(total)
-  };
   return (
     <div className="App">
       <h1>My Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
@@ -34,9 +29,8 @@ function App() {
           <div>{cart[key]}x {key}</div>
         ))
       }
-      <h3>Total: ${total}</h3>
+      <h3>Total: ${(total).toFixed(2)}</h3>
       </div>
-      <div><button onClick={handleClick}>Test</button></div>
     </div>
   );
 }
